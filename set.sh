@@ -2,10 +2,8 @@
 
 echo "🚀 Setup Gradle Wrapper per GitHub Actions..."
 
-# 1. Crea cartella wrapper
 mkdir -p gradle/wrapper
 
-# 2. Crea gradlew
 cat > gradlew <<'EOF'
 #!/usr/bin/env sh
 exec java -Xmx64m -Xms64m -jar "$(dirname "$0")/gradle/wrapper/gradle-wrapper.jar" "$@"
@@ -13,7 +11,6 @@ EOF
 
 chmod +x gradlew
 
-# 3. Crea gradle-wrapper.properties
 cat > gradle/wrapper/gradle-wrapper.properties <<EOF
 distributionBase=GRADLE_USER_HOME
 distributionPath=wrapper/dists
@@ -22,14 +19,12 @@ zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
 EOF
 
-# 4. Scarica gradle-wrapper.jar
-echo "⬇️ Scarico gradle-wrapper.jar..."
+echo "⬇️ Scarico gradle-wrapper.jar corretto..."
 curl -L -o gradle/wrapper/gradle-wrapper.jar \
-  https://github.com/gradle/gradle-wrapper/raw/master/gradle-wrapper.jar
+  https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/8.2/gradle-wrapper-8.2.jar
 
-# 5. Aggiungi a git
 git add gradlew gradle/wrapper
-git commit -m "Aggiunto gradle wrapper per GitHub Actions"
+git commit -m "Aggiunto gradle wrapper funzionante"
 git push
 
-echo "✅ Gradle wrapper pronto per GitHub Actions!"
+echo "✅ Wrapper OK e funzionante!"
