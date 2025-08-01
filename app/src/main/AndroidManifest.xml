@@ -1,13 +1,21 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.davide.severino">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application android:label="Severino" android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".HomeActivity">
+    <application
+        android:label="Severino"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+            
     </application>
 </manifest>
