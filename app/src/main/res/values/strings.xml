@@ -1,0 +1,4 @@
+<resources>
+    <string name="navigation_drawer_open">Apri il menu</string>
+    <string name="navigation_drawer_close">Chiudi il menu</string>
+</resources>
