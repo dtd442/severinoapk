@@ -50,17 +50,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_settings) {
-            startActivity(new Intent(this, SettingsActivity.class));
+            startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
         } else if (id == R.id.nav_stats) {
-            startActivity(new Intent(this, StatsActivity.class));
+            startActivity(new Intent(HomeActivity.this, StatsActivity.class));
         } else if (id == R.id.nav_schedule) {
-            startActivity(new Intent(this, ScheduleActivity.class));
+            startActivity(new Intent(HomeActivity.this, ScheduleActivity.class));
         } else if (id == R.id.nav_calendar) {
-            startActivity(new Intent(this, CalendarActivity.class));
+            startActivity(new Intent(HomeActivity.this, CalendarActivity.class));
         } else if (id == R.id.nav_qrcode) {
-            startActivity(new Intent(this, QrcodeActivity.class));
+            startActivity(new Intent(HomeActivity.this, QrcodeActivity.class));
         } else if (id == R.id.nav_info) {
-            startActivity(new Intent(this, InfoActivity.class));
+            startActivity(new Intent(HomeActivity.this, InfoActivity.class));
         }
 
         drawer.closeDrawer(GravityCompat.START);
