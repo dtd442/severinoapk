@@ -47,18 +47,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-                break;
-            case R.id.nav_stats:
-            case R.id.nav_schedule:
-            case R.id.nav_calendar:
-            case R.id.nav_qrcode:
-            case R.id.nav_info:
-                // Segnaposto
-                break;
+        int id = item.getItemId();
+
+        if (id == R.id.nav_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+        } else if (id == R.id.nav_stats) {
+            startActivity(new Intent(this, StatsActivity.class));
+        } else if (id == R.id.nav_schedule) {
+            startActivity(new Intent(this, ScheduleActivity.class));
+        } else if (id == R.id.nav_calendar) {
+            startActivity(new Intent(this, CalendarActivity.class));
+        } else if (id == R.id.nav_qrcode) {
+            startActivity(new Intent(this, QrcodeActivity.class));
+        } else if (id == R.id.nav_info) {
+            startActivity(new Intent(this, InfoActivity.class));
         }
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
