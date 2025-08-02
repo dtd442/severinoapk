@@ -17,5 +17,11 @@
             android:name=".SettingsActivity"
             android:exported="false" />
             
+            <activity android:name=".StatsActivity" />
+            <activity android:name=".ScheduleActivity" />
+            <activity android:name=".CalendarActivity" />
+            <activity android:name=".QrcodeActivity" />
+            <activity android:name=".InfoActivity" />
+            
     </application>
 </manifest>
